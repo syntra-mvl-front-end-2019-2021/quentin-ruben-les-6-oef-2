@@ -184,8 +184,38 @@ footer p{
     *{
         text-align: center;
     }
-    div.top-buttons ul li{
+    div.top-buttons ul,ul.bottom-buttons {
         display: flex;
         flex-direction: column;
     }
+    div.top-buttons ul li,ul.bottom-buttons li{
+       width: 100%;
+       margin: 10px 0px;
+    }
+}
+
+@media screen and (min-width:736px){
+    div.top-columns,div.bottom-columns{
+        display: flex;
+        justify-content: space-between;
+    }
+    div.top-columns div{
+        width: 45%;
+
+    }
+    div.bottom-columns div{
+        width: 30%;
+
+    }
+}
+
+@media screen and (min-width:980px){
+    div.wrap{
+        display: flex;
+        justify-content: space-between;;
+    }
+    div.wrap > div{
+        width: 45%;
+    }
+
 }
