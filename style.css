@@ -49,6 +49,15 @@ p,blockquote{
     margin-left: 30px;
 }
 
+.floatleft{
+    float: left;
+    margin: 0 2em 2em 0 ;
+}
+.floatright{
+    float: right;
+    margin: 0 0 2em 2em;
+}
+
 h3 {
     font-weight: 600;
 }
@@ -69,17 +78,19 @@ hr.margin30{
     border-width: 0.6px;
 }
 
-.container{
-    width: 90%;
-    margin: auto;
-}
-
 nav {
     width: 100%;
     height: 44px;
-    background-color: #5385C1;
     /* display: flex;
     justify-content: space-between; */
+}
+nav.nav-style-2{
+    background-color: #5385C1;;
+}
+nav.nav-style-1{
+    background-color: none;
+    position: absolute;
+    top:80px ;
 }
 
 nav .container {
@@ -87,37 +98,19 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0;
+    padding: 0;
 }
 
+.menu{
+    display: none;
+}
 .menu a {
     text-decoration: none;
     color: lightgray;
     padding-left: 10px;
     font-weight: 300;
     font-size: 12px;
-}
-
-
-.logo a {
-    text-decoration: none;
-    color: white;
-    padding-left: 10px;
-    font-weight: 700;
-}
-
-header {
-    text-align: center;
-    margin: 50px 0;
-}
-
-
-.subtitle{
-    margin-top: -11px;
-    margin-bottom: 21px;
-}
-.content{
-    display: flex;
-    flex-direction: column;
 }
 
 ul.buttons{
@@ -157,3 +150,220 @@ ul.buttons li.smaller{
 ul.buttons.fit li{
     flex: 1;
 }
+
+.button{
+    padding:1em 0;
+    margin: 3em 0;
+    text-align: center;
+    background-color:#5385C1;
+    color: white;
+    width: 5em;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+header.front-page{
+    height: 450px;
+    background-image: url('images/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+}
+
+header.front-page h1 ,header.front-page p{
+    color: white;
+}
+
+.heading-text{
+    padding: 10em 2em 8em 2em;
+}
+
+.flex-content-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card{
+    border: solid 1px #7EA3D1;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card img{
+    border-radius: 100%;
+    margin:auto;
+    width: 170px;
+}
+
+.card h2{
+    color: white;
+}
+
+header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.subtitle{
+    margin-top: -11px;
+    margin-bottom: 21px;
+    color: #7EA3D1;
+}
+
+
+.container{
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+section.about{
+    background-color: #5385C1;
+    text-align: center;
+}
+
+section.about h1{
+    color: white;
+    font-weight: 100;
+}
+
+footer p{
+    color: #BABCCD;
+    font-size: 0.7em;
+}
+
+
+@media screen and (max-width:480px) {
+
+    * {
+        text-align: center;
+    }
+    div.top-buttons ul,ul.bottom-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    div.top-buttons ul li,ul.bottom-buttons li {
+       width: 100%;
+       margin: 10px 0px;
+    }
+    .menu {
+        display: none;
+    }
+
+    .content .button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:480px){
+    .about .flex-content-col{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .about .card{
+        width: 47%;
+    }
+}
+
+@media screen and (min-width:736px) {
+
+    div.top-columns,div.bottom-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+    div.top-columns div {
+        width: 45%;
+
+    }
+    div.bottom-columns div {
+        width: 30%;
+
+    }
+    footer div p {
+        text-align: left;
+    }
+
+    .top-columns, .wrap {
+        text-align: left;
+    }
+
+    .top-row, .generic {
+        display: block;
+    }
+
+    section.about{
+        padding-bottom: 100px;
+    }
+    section.about h1{
+        color: white;
+        font-size: 3em;
+    }
+
+    .about .card{
+        width: 23%;
+    }
+
+    .about .card img{
+        width: 140px;
+    }
+}
+
+@media screen and (min-width:980px) {
+
+    div.wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.wrap > div {
+        width: 45%;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .flex-content-col{
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .flex-content-col .column-large{
+        width: 47%;
+    }
+    .flex-content-col .column-small{
+        width: 30%;
+    }
+}
+/*
+@media screen and (max-width:980px) {
+
+    div.wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.wrap > div {
+        width: 45%;
+    }
+
+
+}
+*/
