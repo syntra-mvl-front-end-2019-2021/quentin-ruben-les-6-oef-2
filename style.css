@@ -95,6 +95,11 @@ hr.margin30 {
     border-width: 0.6px;
 }
 
+.column.leftborder {
+    padding-left: 50px;
+    border-left: 0.4px solid lightgray;
+}
+
 .container {
     width: 60%;
     margin: auto;
@@ -484,5 +489,9 @@ footer div p {
     .topcontent {
         display: flex;
         margin: 0  250px;
+    }
+    .column.leftborder {
+        padding-left: 50px;
+        border-left: 0.4px solid lightgray;
     }
 }
