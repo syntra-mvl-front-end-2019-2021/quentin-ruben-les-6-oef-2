@@ -366,8 +366,8 @@ footer div p {
         display: block;
     }
 
-    .about>.first, 
-    .about>.second{
+    .aboutcontent>.first, 
+    .aboutcontent>.second{
         display: flex; 
         width: 100%; 
     }
@@ -388,15 +388,10 @@ footer div p {
         width: 45%;
     }
 
-    .about, header {
-        display: block;
-    }
-
-    .about,
-    .about > .first, 
-    .about > .second{
+    .aboutcontent,
+    .aboutcontent > .first, 
+    .aboutcontent > .second{
         display: flex; 
-        flex-direction: row;
         justify-content: space-evenly;
         width: 70%; 
         margin: auto;
