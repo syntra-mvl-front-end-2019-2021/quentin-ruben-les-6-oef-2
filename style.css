@@ -337,6 +337,18 @@ footer div p {
         flex-direction: column;
         width: 100%;
     }
+
+    .left img {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 50%;
+    }
+    
+    .content img {
+        float: right;
+        margin: 0 0px 20px 20px;
+        width: 50%;
+    }
  
 }
 
@@ -347,7 +359,7 @@ footer div p {
         justify-content: space-between;
     }
     div.top-columns div {
-        width: 45%;
+        width: 100%;
 
     }
     div.bottom-columns div {
@@ -375,6 +387,18 @@ footer div p {
     .first, .second {
         display: block ;
     }
+
+    .content img {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 100%;
+    }
+    
+    .content img {
+        float: right;
+        margin: 0 0px 20px 20px;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width:980px) {
@@ -385,7 +409,7 @@ footer div p {
     }
 
     div.wrap > div {
-        width: 45%;
+        width: 100%;
     }
 
     .aboutcontent,
@@ -410,6 +434,17 @@ footer div p {
         width: 20%;
     }
 
+    .content img {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 100%;
+    }
+    
+    .content img {
+        float: right;
+        margin: 0 0px 20px 20px;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:980px) {
@@ -420,11 +455,23 @@ footer div p {
     }
 
     div.wrap > div {
-        width: 45%;
+        width: 100%;
     }
 
     .columns, .content {
         display: block;
+    }
+
+    .content img {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 100%;
+    }
+    
+    .content img {
+        float: right;
+        margin: 0 0px 20px 20px;
+        width: 100%;
     }
 
 }
