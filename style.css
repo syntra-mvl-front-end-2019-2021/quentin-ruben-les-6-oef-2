@@ -235,9 +235,6 @@ ul li:hover {
     width: 100px;
 }
 
-.content .column {
-
-}
 ul li.bigger {
     font-size: 1.35em;
     height: 50px;
@@ -298,14 +295,20 @@ footer div p {
 .about .card {
     border: lightgray 1px solid;
     margin: 20px 50px;
+    text-align: center;
 }
 
 .about .card img {
-    padding-top: 50px;;
+    padding: 30px;
+    border-radius: 50%;  
 }
 
 .card h2 {
     color: lightgrey;
+}
+
+.about header {
+    display: block;
 }
 
 
@@ -329,6 +332,12 @@ footer div p {
     .content .button {
         width: 100%;
     }
+
+    .wrap {
+        flex-direction: column;
+        width: 100%;
+    }
+ 
 }
 
 @media screen and (min-width:736px) {
@@ -357,6 +366,15 @@ footer div p {
         display: block;
     }
 
+    .about>.first, 
+    .about>.second{
+        display: flex; 
+        width: 100%; 
+    }
+
+    .first, .second {
+        display: block ;
+    }
 }
 
 @media screen and (min-width:980px) {
@@ -368,6 +386,33 @@ footer div p {
 
     div.wrap > div {
         width: 45%;
+    }
+
+    .about, header {
+        display: block;
+    }
+
+    .about,
+    .about > .first, 
+    .about > .second{
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 70%; 
+        margin: auto;
+    }
+
+    .topcolumns, .topcontent {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .margin30 {
+        display: none;
+    }
+
+    .topcontent> .button {
+        width: 20%;
     }
 
 }
@@ -383,4 +428,19 @@ footer div p {
         width: 45%;
     }
 
+    .columns, .content {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width:980px) {
+    .column > .button {
+        width: 100px;
+    }
+
+    .topcontent {
+        display: flex;
+        margin: 0  250px;
+    }
 }
